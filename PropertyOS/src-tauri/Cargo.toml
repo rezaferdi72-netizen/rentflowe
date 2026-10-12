@@ -1,0 +1,24 @@
+[package]
+name = "propertyos"
+version = "0.2.0"
+description = "Private offline-first property and financial management"
+authors = ["PropertyOS Owner"]
+edition = "2021"
+license-file = "../LICENSE.md"
+publish = false
+
+[lib]
+name = "propertyos_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+fs2 = "0.4"
